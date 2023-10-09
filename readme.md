@@ -6,6 +6,7 @@
 
 * create github repo (two branches: dev/prod)
 * create static web app (follow instructions in link above) and link the github repo using github actions 
-* create sql db and allow the db to be accessed by your ip 
+* create sql db and allow the db to be accessed by your ip, and azure apps 
+* link the static web app to the sql db
 * develop the project locally (on dev branch)
 * when everything works locally, merge dev and prod, then push prod
