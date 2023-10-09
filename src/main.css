@@ -1,8 +1,5 @@
-body {
-  background-color: #f4f4f4;
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+:root {
+  --primary: rgb(91, 157, 179) !important;
 }
 
 .container {
@@ -10,6 +7,10 @@ body {
   margin: 0 auto;
   padding: 20px;
   text-align: center;
+}
+
+.members {
+  transition: all 0.5s ease-in-out;
 }
 
 h1 {
@@ -41,4 +42,52 @@ p {
 
 .button:hover {
   background-color: #2980b9;
+}
+
+.hidden-div {
+  position: absolute;
+  bottom: -200%;
+  /* left: 0; */
+  width: 100%;
+  /* background-color: #3498db; */
+  color: #fff;
+  /* padding: 20px; */
+  transition: transform 0.5s ease-in-out;
+}
+
+.hidden {
+  transform: translateY(100%);
+  visibility: hidden;
+}
+
+.margin-top-10 {
+  margin-top: 9%;
+}
+
+.margin-bottom-10 {
+  margin-bottom: 10%;
+}
+
+.center-nav {
+  justify-content: center;
+}
+
+.field.label > label {
+  color: var(--primary);
+}
+
+.field > input {
+  color: var(--primary);
+}
+
+input {
+  margin-block-start: 0em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  justify-content: center;
+}
+
+.loading {
+  font-size: 50px;
 }
