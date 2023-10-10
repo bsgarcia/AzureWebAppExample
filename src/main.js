@@ -28,7 +28,7 @@ const doneLoading = () => {
 const createCard = (params) => {
     const card = `
             <article class="no-padding">
-                <img class="responsive small" src="https://${params.pic_url}">
+                <img class="responsive top-round small-round" src="https://${params.pic_url}">
                 <div class="padding">
                     <h5>${params.nickname}</h5>
                     <p>${params.firstname} ${params.lastname}</p>
