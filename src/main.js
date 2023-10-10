@@ -161,8 +161,8 @@ document.querySelector("#submit").addEventListener('click', async () => {
 // INIT
 // ---------------------------------------------------------------------
 loading();
-// wait 1.5 seconds before loading data
+// wait before loading data
 setTimeout(() => {
     list();
     showMembers();
-}, 1000);
+}, 600);
