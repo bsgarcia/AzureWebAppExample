@@ -108,7 +108,16 @@ const getPicURL = () => {
     })
 }
 
-
+const checkInputs = () => {
+    const inputs = [...document.querySelectorAll('input')];
+    let invalid = false;
+    inputs.forEach((input) => {
+        if(!input.value) {
+           invalid = true; 
+        }
+    })
+    return invalid;
+}
 // ---------------------------------------------------------------------
 // EVENT LISTENERS
 // ---------------------------------------------------------------------
@@ -125,10 +134,15 @@ document.querySelector('#home').addEventListener('click', () => {
 });
 
 document.querySelector("#submit").addEventListener('click', async () => {
+    // check that all inputs are filled (use required attribute html5)
+    if (checkInputs()) {
+        document.querySelector("form").reportValidity();
+        return;
+    }
     loading(); 
     hideAddMember();
     hideMembers();
-    const pic_url = await getPicURL()
+    const pic_url = await getPicURL();
     const data = {
         firstname: document.querySelector('#firstname').value,
         lastname: document.querySelector('#lastname').value,
@@ -140,7 +154,8 @@ document.querySelector("#submit").addEventListener('click', async () => {
     // simulate click on home button
     document.querySelector('#home').click()
 
-});
+})
+
 
 // ---------------------------------------------------------------------
 // INIT

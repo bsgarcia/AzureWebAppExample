@@ -28,29 +28,29 @@
                 +
             </button>
         </nav>
-        <div>
+        <form>
             <div class="hidden-div hidden grid">
                 <div class="field label border s2 margin-top-10">
-                    <input id="firstname" placeholder="" value="test">
+                    <input id="firstname" placeholder="" required>
                     <label>firstname</label>
                 </div>
                 <div class="field label border s2">
-                    <input id="lastname" placeholder=" " value="test">
+                    <input id="lastname" placeholder=" " required>
                     <label>lastname</label>
                 </div>
                 <div class="field label border s2">
-                    <input id="nickname" placeholder=" " value="test">
+                    <input id="nickname" placeholder=" " required>
                     <label>nickname</label>
                 </div>
                 <div class="field label prefix border s2">
                     <i style="color:black">attach_file</i>
-                    <input id="file" type="file">
+                    <input id="file" type="file" required>
                     <input type="text">
                     <label>Picture</label>
                 </div>
-                <button id="submit" class="small-round s2 margin-top-10">Become a member!</button>
+                <button id="submit" type="button" class="small-round s2 margin-top-10">Become a member!</button>
             </div>
-        </div>
+        </form>
     <span id="loading" class="mdi mdi-loading mdi-spin loading"></span>
     <div id="members" class="grid hidden members">
     </div>
